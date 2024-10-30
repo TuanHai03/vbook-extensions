@@ -2,7 +2,7 @@ load("config.js");
 
 function execute(url) {
    
-    let doc = fetch(url).html();
+    let doc = fetch(url+"/").html();
     //console.log(doc)
     if (doc) {
         let info = doc.select(".bookinfo");
