@@ -21,7 +21,7 @@ function execute(url) {
             description: info.select(".bookintro").text(),
             detail: tag+"<br>"+info.select(".booktime").text(),
             host: BASE_URL,
-            suggests:[{title:"Cùng tác giả",input:"/modules/article/authorarticle.php?author="+authors,script:"genres.js"}],
+            suggests:[{title:"Cùng tác giả",input:"/modules/article/authorarticle.php?author="+authors,script:"suggest.js"}],
             url: url,
         });
     }
