@@ -1,7 +1,7 @@
 {
   "metadata": {
     "name": "[Fanqie] FQWeb",
-    "author": "TH03",
+    "author": "TuanHai03",
     "version": 1,
     "source": "https://fanqienovel.com/",
     "regexp": "(\\d+)[.](\\d+)[.](\\d+)[.](\\d+):9999/info(.*?)|localhost:9999/info(.*?)|api.api-fanqienovel.sunianyun.live/info(.*?)|list.fqapi.jilulu.cn/info(.*?)|fanqienovel.com/page/(\\d+)|fanqienovel.com/info(.*?)",
