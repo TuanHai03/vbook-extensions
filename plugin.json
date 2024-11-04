@@ -35,6 +35,17 @@
             "description": "uukanshu",
             "type": "chinese_novel",
             "locale": "zh_CN"
+        },
+    {
+            "name": "FanqieWEB",
+            "author": "TH03",
+            "path": "https://raw.githubusercontent.com/TuanHai03/vbook-extensions/main/fqweb/plugin.zip",
+            "version": 1,
+            
+            
+            "description": "fanqie",
+            "type": "chinese_novel",
+            "locale": "zh_CN"
         }
     ]
 }
