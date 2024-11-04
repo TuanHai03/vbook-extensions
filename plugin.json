@@ -42,7 +42,7 @@
             "path": "https://raw.githubusercontent.com/TuanHai03/vbook-extensions/main/fqweb/plugin.zip",
             "version": 1,
             
-            
+            "source": "https://localhost:9999/",
             "description": "fanqie",
             "type": "chinese_novel",
             "locale": "zh_CN"
