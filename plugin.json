@@ -37,7 +37,7 @@
             "locale": "zh_CN"
         },
     {
-            "name": "FanqieWEB",
+            "name": "fanqieweb",
             "author": "TH03",
             "path": "https://raw.githubusercontent.com/TuanHai03/vbook-extensions/main/fqweb/plugin.zip",
             "version": 1,
