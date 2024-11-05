@@ -15,7 +15,7 @@ function execute(url) {
 		var elems = $.QA(doc, 'div.catalog > ul > li > a:not(#bookcase)');
 		
 		elems.forEach(function(e) {
-			data.push({
+			data.unshift({
 				name: formatName(e.text()),
 				url: e.attr('href'),
 				host: BASE_URL
