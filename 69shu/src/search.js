@@ -1,40 +1,50 @@
-load("config.js");
+load('libs.js');
+load('config.js');
+
 function execute(key, page) {
-    
-    const stv_url=JSON.parse(fetch("https://raw.githubusercontent.com/sangtacviet/sangtacviet.github.io/main/update.json").text())['domain']
-    
-    url=stv_url+"/?find=&findinname="+key+"&host=69shu&minc=0&tag="
-    var response = fetch(url)
-    if (response.ok) {
-        let doc = response.html();
-        let novelList = [];
-        let next = doc.select("ul.pagination > li > a").last().attr("href").match(/page=(\d+)/);
-        if (next) next = next[1]; else next = '';
-        console.log(doc.select("#searchviewdiv .row a"))
-        doc.select("#searchviewdiv .row .booksearch").forEach(e => {
-            if(check69shu(e.attr("href"))){
-novelList.push({
-                name: e.select(".searchbooktitle").text(),
-                link: "https://69shu.biz/b/"+getbookid(e.attr("href"))+".html",
-                description: e.select(".searchbookauthor").text(),
-                host: BASE_URL
-            });
-            }
-            
-        });
 
-        return Response.success(novelList, next);
-    }
 
+    // gb18030, gbk uri encode
+    // '打更人' --> '%B4%F2%B8%FC%C8%CB'
+    // https://www.69shu.com/modules/article/search.php?searchkey=%B4%F2%B8%FC%C8%CB&searchtype=all
+    var gbkEncode = function(s) {
+        load('gbk.js');
+        return GBK.encode(s);
+    } // Khởi tạo browser
+
+    var url = BASE_URL+'/modules/article/search.php';
+     //console.log(url);
+
+    var response = fetch(url,{
+  method: "POST", // GET, POST, PUT, DELETE, PATCH
+  headers: {
+   'user-agent': UserAgent.android(),
+  },
+  body: {
+    "searchkey": gbkEncode(key),
+    "submit": "Search"
+  }
+})
+  //console.log(response.html('gbk')) 
+
+  if (response.ok) {
+        let doc = response.html('gbk');
+
+        let books=[]
+        
+        doc.select(".newbox").forEach(book => {
+            console.log(book)
+            books.push({
+                name: book.select(".newnav h3").text(),
+                cover: book.select("img").first().attr("src"),
+                link: book.select(".newright a").first().attr("href"),
+                description: book.select(".ellipsis_2").text(),
+host: BASE_URL
+            })
+});
+        return Response.success(books);
+}
+    
     return null;
-}
-function getbookid(url){
-    
-return url.split('/')[4];
-}
-function check69shu(url){
-if(url.split('/')[2]=="69shu"){
-return true;
-}
-return false;
+
 }
