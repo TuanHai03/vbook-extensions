@@ -4,7 +4,7 @@
     "author": "TuanHai03",
     "version": 1,
     "source": "https://uukanshu.cc",
-    "regexp": "https?://(www.)?uukanshu.cc/book/d+/",
+    "regexp": "(www.)?uukanshu.cc/book/\\d+/?(\\d+\\.html)?",
     "description": "Đọc truyện trên trang uukanshu.cc",
     "locale": "zh_CN",
     "language": "javascript",
