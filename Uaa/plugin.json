@@ -1,8 +1,8 @@
 {
   "metadata": {
     "name": "Uaa",
-    "author": "Nahona",
-    "version": 5,
+    "author": "TuanHai03",
+    "version": 1,
     "source": "https://www.uaa.com",
     "regexp": "(www.|m.)?uaa.com/novel/(chapter|intro)[?]id=\\d+",
     "description": "V5: fix đọc",

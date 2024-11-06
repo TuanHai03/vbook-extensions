@@ -1,4 +1,4 @@
-let BASE_URL = 'https://www.uaa.com';
+1let BASE_URL = 'https://www.uaa.com';
 try {
     if (CONFIG_URL) {
         BASE_URL = CONFIG_URL;
