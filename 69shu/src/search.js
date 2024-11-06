@@ -18,7 +18,7 @@ function execute(key, page) {
     var response = fetch(url,{
   method: "POST", // GET, POST, PUT, DELETE, PATCH
   headers: {
-   'user-agent': UserAgent.android(),
+   'user-agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
   },
   body: {
     "searchkey": gbkEncode(key),
