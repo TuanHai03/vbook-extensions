@@ -1,11 +1,7 @@
 load('config.js')
 
 function execute(url) {
-    let response = fetch(url, {
-        headers: {
-            "token": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6ODYwNzIxNzA0MDMxMzU4OTc2LCJ0eXBlIjoiY3VzdG9tZXIiLCJ0aW1lc3RhbXAiOjE2ODUzNzg1MTE1NzQsImV4cCI6MTY4NTk4MzMxMX0.-FX7rOJP7I10ApjeM5NVaGj57aeYnkVyopniC7U_Dv8"
-        }
-    });let data=[]
+    let response = fetch(url);let data=[]
     if (response.ok) {
 
         let doc = response.html();
