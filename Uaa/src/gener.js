@@ -12,13 +12,12 @@ function execute(input, page) {
         
         const data = [];
         
-        doc.select(".main_box .novel_list_box ul li").forEach(e => {
-            console.log(e)
+        doc.select(".main_box .popular_box .h_scroll_box ul li").forEach(e => {
             data.push({
                 name: e.select(".title").text(),
                 link: e.select(".cover_box a").attr('href'),
                 cover: e.select(".cover_box a img").attr('src'),
-                description: e.select(".info_box a").first().text(),
+                description: e.select(".author").first().text(),
                 
                 host: BASE_URL
             });
