@@ -2,7 +2,7 @@
   "metadata": {
     "name": "uukanshu",
     "author": "TuanHai03",
-    "version": 1,
+    "version": 2,
     "source": "https://uukanshu.cc",
     "regexp": "(www.)?uukanshu.cc/book/\\d+/?(\\d+\\.html)?",
     "description": "Đọc truyện trên trang uukanshu.cc",

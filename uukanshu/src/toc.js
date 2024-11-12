@@ -2,7 +2,7 @@ load("config.js");
 
 function execute(url) {
    
-        let response=fetch(url)
+        let response=fetch(url+"/")
    let doc=response.html()
    
    let data=[]
