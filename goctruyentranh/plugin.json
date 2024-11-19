@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "name": "Góc truyện tranh",
+    "author": "TuanHai03",
+    "version": 1,
+    "source": "https://goctruyentranh.net/",
+    "regexp": "(www.)?goctruyentranh.net/[a-zA-Z0-9/-]*",
+    "description": "Góc truyện tranh",
+    "locale": "vi_VN",
+    "language": "javascript",
+    "type": "comic"
+  },
+  "script": {
+    "home": "home.js",
+    "genre":"genre.js",
+    "detail": "detail.js",
+    "toc": "toc.js",
+    "chap": "chap.js",
+    "search":"search.js"
+  }
+}
