@@ -57,6 +57,17 @@
             "description": "Uaa",
             "type": "chinese_novel",
             "locale": "zh_CN"
+        },
+    {
+            "name": "Góc truyện tranh",
+            "author": "TH03",
+            "path": "https://raw.githubusercontent.com/TuanHai03/vbook-extensions/main/goctruyentranh/plugin.zip",
+            "version": 1,
+            
+            "source": "https://goctruyentranh.net/",
+            "description": "Góc truyện tranh",
+            "type": "comic",
+            "locale": "vi_VN"
         }
     ]
 }
