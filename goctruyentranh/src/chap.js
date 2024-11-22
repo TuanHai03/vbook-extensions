@@ -1,4 +1,4 @@
-poload('config.js');
+load('config.js');
 function execute(url) {
    var browser = Engine.newBrowser() // Khởi tạo browser
 browser.setUserAgent(UserAgent.android()) // Tùy chỉnh user agent

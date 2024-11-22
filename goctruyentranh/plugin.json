@@ -12,7 +12,6 @@
   },
   "script": {
     "home": "home.js",
-    "genre":"genre.js",
     "detail": "detail.js",
     "toc": "toc.js",
     "chap": "chap.js",
