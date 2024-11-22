@@ -15,9 +15,15 @@ var imgs = browser.html().select("main .image-section img");
         var data = [];
         console.log(imgs.length)
         imgs.forEach(e=>{
+            image=BASE_URL+e.attr("src")
+            const regex = /https:\/\/[^\s]+/g; // Biểu thức tìm tất cả các URL bắt đầu bằng http
+const matches = e.attr("src").match(regex);
+            if(matches){
+                image=e.attr("src")
+            }
              data.push({
                 referer:url,
-                link: BASE_URL+e.attr("src")
+                link: image
   })
         })
         return Response.success(data);
