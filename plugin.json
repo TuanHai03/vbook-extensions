@@ -68,6 +68,16 @@
             "description": "Góc truyện tranh",
             "type": "comic",
             "locale": "vi_VN"
+        },{
+            "name": "jwxs",
+            "author": "TH03",
+            "path": "https://raw.githubusercontent.com/TuanHai03/vbook-extensions/main/jwxs/plugin.zip",
+            "version": 1,
+            "source": "https://www.jwxs.org/",
+            
+            "description": "精武小说网",
+            "type": "chinese_novel",
+            "locale": "zh_CN"
         }
     ]
 }
