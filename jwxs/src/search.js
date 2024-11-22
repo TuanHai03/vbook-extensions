@@ -4,17 +4,17 @@ function execute(key, page) {
     var browser = Engine.newBrowser() // Khởi tạo browser
 browser.setUserAgent(UserAgent.android()) // Tùy chỉnh user agent
 browser.launch(url, 5100)
-    console.log(browser.html())
+    //console.log(browser.html())
     let books=[]
         //console.log(response.html())
         let doc=browser.html().select(".hot .item")
         doc.forEach(book => {
             console.log(book)
             books.push({
-                name: book.name,
-                link: BASE_URL+"/truyen/"+book.nameEn,
-                description: book.description,
-                cover:book.photo,
+               cover: book.select(".image a img").attr("src"),
+                name: book.select("dl dt").text(),
+                link: book.select(".image a").first().attr("href"),
+                description: book.select("dl div").text(),
                 host: BASE_URL
             })
         });
