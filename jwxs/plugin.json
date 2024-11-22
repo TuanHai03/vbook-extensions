@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "name": "Tinh Võ Tiểu Thuyết Mạng",
+    "author": "TuanHai03",
+    "version": 1,
+    "source": "https://www.jwxs.org",
+    "regexp": "(www.)?jwxs.org/book/[a-zA-Z0-9/-]*",
+    "description": "精武小说网",
+    "locale": "zh_CN",
+    "language": "javascript",
+    "type": "chinese_novel"
+  },
+  "script": {
+    "home": "home.js",
+    "genre":"genre.js",
+    "detail": "detail.js",
+    "toc": "toc.js",
+    "chap": "chap.js",
+    "search":"search.js"
+  }
+}
