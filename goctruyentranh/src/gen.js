@@ -1,22 +1,28 @@
 load("config.js")
 function execute(input, page) {
-    if (!page) page = '1';
-    url= BASE_URL+"/danh-sach/"+input+"?page="+page;
-    let response = fetch(url);
+    if (!page) page = '0';
+    url= "https://goctruyentranhvui6.com/api/v2/search?p="+page+"&searchValue=&orders%5B%5D="+input;
+    let response = fetch(url,{
+        method: "GET",
+        headers: {
+    "User-Agent": UserAgent.android()
+  }
+    });
+    //console.log(url)
+    //console.log(response.html())
     if(response.ok){
-        let doc=response.html()
-        //console.log(doc)
+        let doc=response.json()    
         let list=[]
-        let books = doc.select("main section >div").get(2).select(">div")
+        //console.log(doc)
+        let books = doc.result.data
         //console.log(books)
         books.forEach(book => {
-           
-            
+            //console.log(book)
             list.push({
-                cover: BASE_URL+book.select(".relative a img").first().attr("src"),
-                name: book.select(".flex-grow a").get(1).text(),
-                link: book.select(".relative a").first().attr("href"),
-                description: book.select(".mt-4 li").first().select("a span").first().text(),
+                cover: BASE_URL+book.photo,
+                name: book.name,
+                link: BASE_URL+"/truyen/"+book.nameEn,
+                description: book.description,
                 host: BASE_URL
             })
         });

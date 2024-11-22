@@ -1,4 +1,4 @@
-let BASE_URL="https://goctruyentranh.net";
+let BASE_URL="https://goctruyentranhvui6.com";
 
 try {
     if (CONFIG_URL) {

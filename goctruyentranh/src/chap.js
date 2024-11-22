@@ -1,16 +1,28 @@
-load('config.js');
+poload('config.js');
 function execute(url) {
-    var doc = fetch(url);
-    if (doc.ok) {
-        doc=doc.html().select("main>div .w-full.block >div")
-        console.log(doc)
-        var imgs = doc.select("img");
+   var browser = Engine.newBrowser() // Khởi tạo browser
+browser.setUserAgent(UserAgent.android()) // Tùy chỉnh user agent
+browser.launch(url, 1000)
+const script = `
+    (function() {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        return 'Đã kéo xuống cuối trang';
+    })();
+`;
+ browser.callJs(script, 1000);
+ console.log(browser.html())
+var imgs = browser.html().select("main .image-section img");
         var data = [];
-        for (var i = 0; i < imgs.size(); i++) {
-            var e = imgs.get(i)
-            data.push({link: e.attr("data-src")});
-        }
+        console.log(imgs.length)
+        imgs.forEach(e=>{
+             data.push({
+                referer:url,
+                link: BASE_URL+e.attr("src")
+  })
+        })
         return Response.success(data);
-    }
-    return null;
-}
+ }
+
+
+ 
+ 
