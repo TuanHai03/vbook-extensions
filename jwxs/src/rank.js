@@ -1,11 +1,11 @@
 load("config.js");
 function execute(url, page) {
     if (!page) page = '1';
-let newUrl = url.replace(/\/\d+\/$/, page);
+let newUrl = url.replace(/\/\d+\/$/, "/"+page);
     let response = fetch( BASE_URL + newUrl);
 
     
-console.log( response);
+console.log( BASE_URL + newUrl);
    if (response.ok) {
         
         let doc=response.html();
