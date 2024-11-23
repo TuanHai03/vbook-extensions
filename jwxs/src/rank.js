@@ -1,16 +1,22 @@
 load("config.js");
 function execute(url, page) {
     if (!page) page = '1';
-let newUrl = url.replace(/\/\d+\/$/, "/"+page);
-    let response = fetch( BASE_URL + newUrl);
+    index=0;
+    if(!url.includes("rank")){
+url = url.replace(/\/\d+\/$/, "/"+page);
+index=1
+    }
+
+    let response = fetch( BASE_URL + url+"/");
 
     
-console.log( BASE_URL + newUrl);
+console.log( BASE_URL + url);
    if (response.ok) {
         
         let doc=response.html();
-        let keywords=doc.select("#hotcontent").get(1).select(".item");
         
+        let keywords=doc.select("#hotcontent").get(index).select(".item");
+        console.log(keywords)
         let books=[]
         keywords.forEach(book => {
            
