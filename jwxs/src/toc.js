@@ -9,7 +9,7 @@ function execute(url) {
    console.log(chapters)
     chapters.forEach(e => {
         console.log(e)
-        data.unshift({
+        data.push({
             name: e.text(),
             url: BASE_URL+e.attr("href"),
             
