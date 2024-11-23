@@ -1,10 +1,12 @@
 load("config.js")
 function execute(url) {
-    let response = fetch(url);
+     var browser = Engine.newBrowser() // Khởi tạo browser
+browser.setUserAgent(UserAgent.android()) // Tùy chỉnh user agent
+browser.launch(url, 1000)
     let details=""
-    console.log(response.ok)
-    if (response.ok) {
-        let doc = response.html()//.select("main>div>section");
+    
+    
+        let doc = browser.html()//.select("main>div>section");
         console.log(doc.select("#content>div>div>div").get(2))
         doc.select("#content>div>div").get(1).select(".information-section.pa-4 div").forEach(e=>{
                 details+=e.text()+"<br>";
@@ -22,8 +24,5 @@ function execute(url) {
         host: BASE_URL,
     });
     
-    }else{
-        return Response.success("Bạn cần vượt capcha để tiếp tục")
-    }
 
 }
