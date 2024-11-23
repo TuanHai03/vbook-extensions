@@ -1,6 +1,6 @@
 load("config.js")
 function execute(url) {
-    url=url.replace("book", "xiaoshuo")
+    
     let response=fetch(url+"/")
    let doc=response.html()
    console.log(doc)
