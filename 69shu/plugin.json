@@ -4,7 +4,7 @@
     "author": "TuanHai03",
     "version": 1,
     "source": "https://www.69shu.biz",
-    "regexp": "(www.|m.)?(69shu|69shuba|69xinshu)\\.(pro|biz)/(b/[^s]*|c/[^s]*)",
+    "regexp": "(www.|m.)?(69shu|69shuba|69xinshu)\\.[a-z]+/(b/[^s]*|c/[^s]*)",
     "description": "Đọc truyện trên trang 69shuba.com",
     "locale": "zh_CN",
     "language": "javascript",
