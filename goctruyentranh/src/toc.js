@@ -11,7 +11,7 @@ if(response.ok)
     if (response.ok) {
         let doc = response.html()
         id=doc.select("main>div>input").first().attr("value")
-        doc=doc.select("main.main>div.main-wrap>div.row.mb-5>div#content>div>div.rounded.w-100.mt-2.mb-3 .list>div")
+        doc=doc.select("main.main>div.main-wrap>div.row.mb-5>div#content>div>div.rounded.w-100.mt-2.mb-3>.chapter-list>.list>div")
         //console.log(doc)
         doc.forEach(e=>{
              chapter.unshift({
