@@ -6,7 +6,7 @@ method: "GET",
     "User-Agent": UserAgent.android()
     }})// lấy html
 
-if(respo
+if(response.ok())
     let chapter=[]
     if (response.ok) {
         let doc = response.html()
