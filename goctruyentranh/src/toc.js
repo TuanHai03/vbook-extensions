@@ -1,6 +1,12 @@
 load("config.js")
 function execute(url) {
-    let response = fetch(url);   
+       let response=fetch(url,{
+method: "GET",
+        headers: {
+    "User-Agent": UserAgent.android()
+    }})// lấy html
+
+if(respo
     let chapter=[]
     if (response.ok) {
         let doc = response.html()
