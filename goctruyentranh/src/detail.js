@@ -21,12 +21,14 @@ let doc = response.html()
                 details+=e.text()+"<br>";
             }   
         )
+        details+="Thể loại: "
         doc.select(">div").get(1).select("div .group-content a").forEach
         (e=>
             {
-                    details+=e.text()+"<br>";
+                    details+=e.text()+", ";
             }
         )
+        details=details.slice(0, -2);
         return Response.success({
         name: doc.select(">div").get(0).text(),
         cover: img,
