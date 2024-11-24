@@ -16,7 +16,6 @@ function execute(url) {
         })
         
         urls=BASE_URL+"/api/comic/"+id+"/chapter?offset=21&limit=-1"
-        sleep(1000)
          response = fetch(urls);
         // console.log(response.html())
         if(response.ok){
