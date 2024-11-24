@@ -5,7 +5,9 @@ function execute(url) {
     if (response.ok) {
         let doc = response.html()
         id=doc.select("main>div>input").first().attr("value")
-        doc.select("#content>div>div").get(2).select(">div>div").get(1).select(">div>a").forEach(e=>{
+        doc=doc.select("main.main>div.main-wrap>div.row.mb-5>div#content>div>div.rounded.w-100.mt-2.mb-3 .list")
+        console.log(doc)
+        doc.forEach(e=>{
              chapter.unshift({
                 name: "Chương "+e.select(".chapter-info").text().replace("#", ""),
                 url: url+"/chuong-"+e.select(".chapter-info").text().replace("#", ""),

@@ -2,7 +2,7 @@
   "metadata": {
     "name": "Góc truyện tranh",
     "author": "TuanHai03",
-    "version": 2,
+    "version": 3,
     "source": "https://goctruyentranhvui6.com",
     "regexp": "(www.)?goctruyentranhvui\\d*.com/truyen/[a-zA-Z0-9/-]*",
     "description": "Góc truyện tranh",
