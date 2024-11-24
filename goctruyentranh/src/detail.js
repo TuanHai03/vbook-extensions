@@ -1,28 +1,39 @@
 load("config.js")
+let details="";
 function execute(url) {
-     var browser = Engine.newBrowser() // Khởi tạo browser
-browser.setUserAgent(UserAgent.android()) // Tùy chỉnh user agent
-browser.launch(url, 1000)
-    let details=""
-    
-    
-        let doc = browser.html()//.select("main>div>section");
-        console.log(doc.select("#content>div>div>div").get(2))
-        doc.select("#content>div>div").get(1).select(".information-section.pa-4 div").forEach(e=>{
+    let response=fetch(url,{
+method: "GET",
+        headers: {
+    "User-Agent": UserAgent.android()
+    }})// lấy html
+
+if(response.ok) // kiểm tra xem có lấy được ko
+{
+    //console.log(response.html())
+let doc = response.html()
+        doc=doc.select("main.main>div.main-wrap>div.row.mb-5>div")// lấy phần chính
+        img=doc.get(0).select("img").attr("src")//lấy ảnh   
+        doc=doc.select("#content>div>div")// lấy html chứa info
+        //console.log(doc.select(">div").get(1)) 
+        doc.get(1).select(".information-section.pa-4 div").forEach
+        (e=>
+            {
                 details+=e.text()+"<br>";
-        })
-        doc.select("#content>div>div>div .group-content a").forEach(e=>{
-                details+=e.text()+"<br>";
-        })
-        //console.log(doc.select(".text-white .line-clamp-3"))
-       
+            }   
+        )
+        doc.select(">div").get(1).select("div .group-content a").forEach
+        (e=>
+            {
+                    details+=e.text()+"<br>";
+            }
+        )
         return Response.success({
-        name: doc.select("#content>div>div>div").get(0).text(),
-        cover: BASE_URL+doc.select("main .side-bar img").attr("src"),
-        description: doc.select("#content>div>div>div").get(2).text(),
+        name: doc.select(">div").get(0).text(),
+        cover: img,
+        description: doc.select(">div").get(2).text(),
         detail: details,
         host: BASE_URL,
     });
     
-
+}    
 }
