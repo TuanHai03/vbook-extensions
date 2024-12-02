@@ -1,14 +1,15 @@
 
-let BASE_URL = JSON.parse(fetch('https://raw.githubusercontent.com/TuanHai03/vbook-extensions/main/Config_url').text())['69shu'];
+let BASE_URL = "https://69shuba.cx";
+let HOME_URL=BASE_URL+"/blist/class/0.htm";
+  let TAG_URL=BASE_URL+"/blist/tags";
 console.log(BASE_URL)
-  var host = BASE_URL;
 try {
     if (CONFIG_URL) {
         BASE_URL = CONFIG_URL;
     }
 } catch (error) {
 }
-  let HOME_URL=BASE_URL+"/blist/class/0.htm"
+  
 try {
     
     if (HOME) {
@@ -16,7 +17,7 @@ try {
     }
 } catch (error) {
 }
-  let TAG_URL=BASE_URL+"/blist/tags"
+
 try {
     
     if (TAG) {
