@@ -8,3 +8,19 @@ try {
     }
 } catch (error) {
 }
+  let HOME_URL=BASE_URL+"/blist/class/0.htm"
+try {
+    
+    if (HOME) {
+        HOME_URL = HOME;
+    }
+} catch (error) {
+}
+  let TAG_URL=BASE_URL+"/blist/tags"
+try {
+    
+    if (TAG) {
+        TAG_URL = TAG;
+    }
+} catch (error) {
+}
