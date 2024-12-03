@@ -2,7 +2,7 @@
   "metadata": {
     "name": "69shuba",
     "author": "TuanHai03",
-    "version": 2,
+    "version": 3,
     "source": "https://www.69shu.biz",
     "regexp": "(www.)?(69shuba|69shu|69xinshu).[a-z]{2,}/(book|b)/[^s]*",
     "description": "Đọc truyện trên trang 69shuba.com",
