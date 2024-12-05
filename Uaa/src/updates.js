@@ -2,7 +2,7 @@ load('config.js');
 
 function execute(input, page) {
     if (!page) page = '1';
-    let response = fetch(BASE_URL + input);
+    let response = fetch(BASE_URL + input+"?keyword=&sort=2&page="+page);
     if (response.ok) {
         let doc= response.html();
         
