@@ -2,18 +2,13 @@ load('libs.js');
 load('config.js');
 
 function execute(url) {
-    let book="/book/";
-    let d="/";
-    const regex = /\/([^\/]+)\.html/;
+    const regex = /\/(\d+)\.htm/;
     const match = url.match(regex);
     let book_id = match[1];
     
-    if(url.includes("69yuedu")){
-book="/chapters/";
-d=".html"
-    }
-    let response = fetch(BASE_URL + book + book_id +d);
-    console.log(BASE_URL + book + book_id +d)
+    
+   let response = fetch(BASE_URL + "/book/" + book_id +"/");
+    console.log(BASE_URL + "/book/" + book_id +"/")
     if (response.ok) {
         let doc = response.html('gbk');
 console.log(doc)
