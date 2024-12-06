@@ -1,5 +1,5 @@
 
-let BASE_URL = "https://www.69yuedu.net";
+let BASE_URL = "https://69shuba.cx/";
 let HOME_URL=BASE_URL+"/blist/class/0.htm";
   let TAG_URL=BASE_URL+"/blist/tags";
   let CONTENT_TXT=".txtnav"
