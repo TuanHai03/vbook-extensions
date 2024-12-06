@@ -2,10 +2,10 @@
   "metadata": {
     "name": "69shuba",
     "author": "TuanHai03",
-    "version": 3,
+    "version": 4,
     "source": "https://www.69shu.biz",
-    "regexp": "(www.)?(69shuba|69shu|69xinshu).[a-z]{2,}/(book|b)/[^s]*",
-    "description": "Đọc truyện trên trang 69shuba.com",
+    "regexp": "(www.)?(69shuba|69shu|69xinshu|69yuedu).[a-z]{2,}/(book|b)/[^s]*",
+    "description": "Đọc truyện trên trang 69shuba.com, 69yuedu.net",
     "locale": "zh_CN",
     "language": "javascript",
     "type": "chinese_novel"

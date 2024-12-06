@@ -8,10 +8,12 @@ function execute(url) {
     }
     url = url.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)/img, BASE_URL);
     url = url.replace("/txt/","/book/")
+    console.log(url)
     let response = fetch(url);
+    console.log(response.ok)
     if (response.ok) {
         let doc = response.html('gbk');
-
+console.log(doc)
         return Response.success({
             name: $.Q(doc, 'div.booknav2 > h1 > a').text(),
             cover: $.Q(doc, 'div.bookimg2 > img').attr('src'),

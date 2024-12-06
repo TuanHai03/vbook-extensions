@@ -2,13 +2,14 @@ load('config.js');
 load('libs.js');
 function execute(url) {
     let response = fetch(url);
+    console.log(response.ok)
     if (response.ok) {
         let doc = response.html('gbk');
         if(doc.html().includes("69shubaV1")) {
             var browser = Engine.newBrowser() // Khởi tạo browser
             doc = browser.launch(url, 4000)
         }
-        var htm = doc.select(".txtnav")
+        var htm = doc.select(CONTENT_TXT)
         htm.select(".contentadv").remove()
         htm.select(".bottom-ad").remove()
         htm.select(".txtinfo").remove()
