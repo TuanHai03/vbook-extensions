@@ -2,15 +2,21 @@ load('libs.js');
 load('config.js');
 
 function execute(url) {
-    const regex = /\/(\d+)\.htm/;
+    let book="/book/";
+    let d="/";
+    const regex = /\/([^\/]+)\.html/;
     const match = url.match(regex);
     let book_id = match[1];
-    console.log(book_id)
-    let response = fetch(BASE_URL + "/book/" + book_id +"/");
-    console.log(BASE_URL + "/book/" + book_id +"/")
+    
+    if(url.includes("69yuedu")){
+book="/chapters/";
+d=".html"
+    }
+    let response = fetch(BASE_URL + book + book_id +d);
+    console.log(BASE_URL + book + book_id +d)
     if (response.ok) {
         let doc = response.html('gbk');
-
+console.log(doc)
 		var data = [];
 		var elems = $.QA(doc, 'div.catalog > ul > li > a:not(#bookcase)');
 		

@@ -9,7 +9,7 @@ function execute(url) {
             var browser = Engine.newBrowser() // Khởi tạo browser
             doc = browser.launch(url, 4000)
         }
-        var htm = doc.select(CONTENT_TXT)
+        var htm = doc.select(".txtnav")
         htm.select(".contentadv").remove()
         htm.select(".bottom-ad").remove()
         htm.select(".txtinfo").remove()
