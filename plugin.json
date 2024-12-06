@@ -20,9 +20,9 @@
             "author": "TH03",
             "path": "https://raw.githubusercontent.com/TuanHai03/vbook-extensions/main/69shu/plugin.zip",
             "version": 6,
-            "source": "Đọc truyện trên trang 69shuba.cx, 69yuedu.net",
+            "source": "https://69shuba.cx",
             
-            "description": "uukanshu",
+            "description": "Đọc truyện trên trang 69shuba.cx",
             "type": "chinese_novel",
             "locale": "zh_CN"
         },
@@ -76,6 +76,17 @@
         "source": "http://hentaifox.com/",
         "icon": "https://raw.githubusercontent.com/hishirooo/vbook-ext/main/htfox/icon.png",
         "description": "Đọc truyện trên trang http://hentaifox.com/"
-      }
+      },
+    {
+            "name": "69shu",
+            "author": "TH03",
+            "path": "https://raw.githubusercontent.com/TuanHai03/vbook-extensions/main/69shu/plugin.zip",
+            "version": 1,
+            "source": "https://www.69yuedu.net",
+            
+            "description": "Đọc truyện trên trang  69yuedu.net",
+            "type": "chinese_novel",
+            "locale": "zh_CN"
+        }
     ]
 }
