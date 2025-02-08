@@ -7,7 +7,7 @@
     "regexp": "(www.|m.)?uaa.com/novel/(chapter|intro)[?]id=\\d+",
     "description": "V5: fix đọc",
     "locale": "zh_CN",
-    "language": "javascript"
+    "language": "javascript",
     "type": "chinese_novel",
     "tag": "nsfw"
   },
