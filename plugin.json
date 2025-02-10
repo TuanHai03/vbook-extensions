@@ -26,6 +26,28 @@
             "type": "chinese_novel",
             "locale": "zh_CN"
         },
+     {
+            "name": "idejian",
+            "author": "TH03",
+            "path": "https://raw.githubusercontent.com/TuanHai03/vbook-extensions/main/idejian/plugin.zip",
+            "version": 1,
+            "source": "https://www.idejian.com",
+            
+            "description": "Trang idejian",
+            "type": "chinese_novel",
+            "locale": "zh_CN"
+        },
+     {
+            "name": "Fanqie",
+            "author": "TH03",
+            "path": "https://raw.githubusercontent.com/TuanHai03/vbook-extensions/main/fq/plugin.zip",
+            "version": 1,
+            "source": "https://fanqienovel.com",
+            
+            "description": "Hỗ trợ đọc truyện bị gỡ trên fanqie",
+            "type": "chinese_novel",
+            "locale": "zh_CN"
+        },
     {
             "name": "fanqieweb",
             "author": "TH03",
