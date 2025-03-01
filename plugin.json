@@ -38,13 +38,12 @@
             "locale": "zh_CN"
         },
      {
-            "name": "Fanqie",
+            "name": "天悦小说网",
             "author": "TH03",
-            "path": "https://raw.githubusercontent.com/TuanHai03/vbook-extensions/main/fq/plugin.zip",
+            "path": "https://raw.githubusercontent.com/TuanHai03/vbook-extensions/main/Tianyue/plugin.zip",
             "version": 1,
-            "source": "https://fanqienovel.com",
-            
-            "description": "Hỗ trợ đọc truyện bị gỡ trên fanqie",
+            "source": "https://m.xtyxsw.org",
+            "description": "Thiên duyệt tiểu thuyết mạng",
             "type": "chinese_novel",
             "locale": "zh_CN"
         },
@@ -107,6 +106,16 @@
             "source": "https://www.69yuedu.net",
             
             "description": "Đọc truyện trên trang  69yuedu.net",
+            "type": "chinese_novel",
+            "locale": "zh_CN"
+        },
+    {
+            "name": "Sáng Tác Việt",
+            "author": "TH03",
+            "path": "https://raw.githubusercontent.com/TuanHai03/vbook-extensions/main/Sangtacviet/plugin.zip",
+            "version": 1,
+            "source": "https://sangtacviet.app/",
+            "description": "phải tạo http sever",
             "type": "chinese_novel",
             "locale": "zh_CN"
         }
