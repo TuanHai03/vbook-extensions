@@ -5,13 +5,15 @@
     "version": 1,
     "source": "https://sangtacviet.app/",
     "regexp": "(www.)?(sangtacviet).[a-z]+/truyen/[a-zA-Z0-9/-]+$",
-    "description": "Sáng Tác Việt",
+    "description": "phải tạo http sever",
     "locale": "zh_CN",
     "language": "javascript",
     "type": "chinese_novel"
   },
   "script": {
     "home": "home.js",
+    "genre": "genre.js",
+        "search": "search.js",
     "detail": "detail.js",
     "toc": "toc.js",
     "chap": "chap.js"
