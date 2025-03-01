@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "name": "天悦小说网",
+    "author": "TuanHai03",
+    "version": 1,
+    "source": "https://m.xtyxsw.org",
+    "regexp": "https://m?.xtyxsw.org/book/[a-zA-Z0-9/-]*.html",
+    "description": "Thiên duyệt tiểu thuyết mạng",
+    "locale": "zh_CN",
+    "language": "javascript",
+    "type": "chinese_novel"
+  },
+  "script": {
+    "home": "home.js",
+    "detail": "detail.js",
+    "genre": "genre.js",
+    "toc": "toc.js",
+    "search": "search.js",
+    "chap": "chap.js",
+    "page":"page.js"
+  }
+}
