@@ -10,10 +10,10 @@ return Response.success(books.data.replace(/<i([^>]*)t='(.*?)'([^>]*)>(.*?)<\/i>
             try{
                 return Response.success(books.data.replace("\n","<\/p>").replace("\t","<p>\t"));
             }catch(error){
-                return Response.success(books.err)
+                return Response.error(books.err)
             }
             
         }
          }
-        return null;
+        return Response.error("HTTP SEVER không hoạt động");
 }
