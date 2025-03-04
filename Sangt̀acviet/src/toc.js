@@ -23,7 +23,7 @@ function execute(url) {
     const chapters = [];
 toc.split('-//-').forEach(e=>{
 chapters.push({
-    url:"/?bookid="+input[2]+"&c="+e.match(regex1)[1]+"&h="+input[1]+"&key=undefined&sajax=readchapter",
+    url:"/?bookid="+input[2]+"&c="+e.match(regex1)[1]+"&h="+input[1],
     name:e.match(regex1)[2],
 host :BASE_URL
 })
