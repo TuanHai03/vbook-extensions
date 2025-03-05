@@ -2,10 +2,10 @@
   "metadata": {
     "name": "Hentaifox.com",
     "author": "TuanHai03",
-    "version": 1,
+    "version": 2,
     "source": "https://hentaifox.com/",
     "regexp": "(www.)?hentaifox.com/gallery/(\\d+)/?$",
-    "description": "Fix lỗi load chapter",
+    "description": "Fix lỗi load ảnh",
     "local": "vi-VN",
     "language": "javascript",
     "type": "comic",
