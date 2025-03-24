@@ -2,7 +2,7 @@
   "metadata": {
     "name": "Sáng Tác Việt",
     "author": "TuanHai03",
-    "version": 1,
+    "version": 2,
     "source": "https://sangtacviet.app/",
     "regexp": "(www.)?(sangtacviet).[a-z]+/truyen/[a-zA-Z0-9/-]+$",
     "description": "phải tạo http sever",

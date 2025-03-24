@@ -1,17 +1,22 @@
 load("config.js");
 function execute(url) {
+const regex = /var\s+bookinfo\s*=\s*(\{[\s\S]*?\});/;
     let response = fetch(url + '/');
     if (response.ok) {
-        let doc = response.html();
-        let author = doc.html().match(/Tác giả:.*?\s+(.*?)\s*</);
-        if (author) author = author[1];
-        let des = doc.select(".blk:has(.fa-water) .blk-body").html();
-        let _detail = 'Tên gốc : ' + doc.select("#oriname").text() + '<br>' + doc.select(".blk:has(.fa-info-circle) > div:nth-child(4)").text() + '<br>' + doc.select(".blk:has(.fa-info-circle) > div:nth-child(3)").text();
-
+        let text=response.text()
+        let json=JSON.parse(text.match(regex)[1])
+        let doc = Html.parse(text) 
+         let des = doc.select(".blk:has(.fa-water) .blk-body").html();
+         let _detail = ""
+         doc.select(".blk-body.ib-100").forEach(e=>{
+_detail+="<br>"+e.text()
+         })
+       
+        //return Response.success(doc);
         return Response.success({
-            name: doc.select("#oriname").text(),
-            cover: doc.select(".container:has(#book_name2) img").first().attr("src"),
-            author: author || 'Unknow',
+            name: json.name,
+            cover: json.thumb,
+            author: json.author || 'Unknow',
             description: des,
             detail: _detail,
             ongoing: true,
