@@ -1,11 +1,11 @@
 load("config.js");
 function execute(url, page) {
     if (!page) page = '1';
-    let response = fetch(URL_STV+"/?find=&minc=0&sort="+url+"&p=" + page+"&tag=")
+    let response = fetch(URL_STV+"/io/searchtp/searchBooks?find=&minc=0&sort="+url+"&p=" + page+"&tag=")
     if (response.ok) {
         let doc = response.html()
         let next = doc.select(".pagination").select("li.active + li").text()
-        let el = doc.select("#searchviewdiv a.booksearch")
+        let el = doc.select("a.booksearch")
         let data = [];
         function toCapitalize(sentence) {
             const words = sentence.split(" ");

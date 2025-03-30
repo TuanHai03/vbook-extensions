@@ -2,10 +2,10 @@
   "metadata": {
     "name": "Sáng Tác Việt",
     "author": "TuanHai03",
-    "version": 3,
+    "version": 4,
     "source": "https://sangtacviet.app/",
     "regexp": "(www.)?(sangtacviet).[a-z]+/truyen/[a-zA-Z0-9/-]+$",
-    "description": "phải tạo http sever",
+    "description": "Liên Hệ để mua HTTP SEVER",
     "locale": "zh_CN",
     "language": "javascript",
     "type": "chinese_novel"
@@ -13,7 +13,7 @@
   "script": {
     "home": "home.js",
     "genre": "genre.js",
-        "search": "search.js",
+    "search": "search.js",
     "detail": "detail.js",
     "toc": "toc.js",
     "chap": "chap.js"
