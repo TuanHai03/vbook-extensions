@@ -113,9 +113,9 @@
             "name": "Sáng Tác Việt",
             "author": "TH03",
             "path": "https://raw.githubusercontent.com/TuanHai03/vbook-extensions/main/Sangt̀acviet/plugin.zip",
-            "version": 3,
+            "version": 4,
             "source": "https://sangtacviet.app/",
-            "description": "phải tạo http sever",
+            "description": "Liên Hệ để mua HTTP SEVER",
             "type": "chinese_novel",
             "locale": "zh_CN"
         }
